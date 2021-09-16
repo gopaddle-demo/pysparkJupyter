@@ -15,4 +15,6 @@ WORKDIR /home/${USER}
 
 RUN mkdir /home/${USER}/work/
 
+ADD sql.ipynb /home/${USER}/work/
+
 CMD ["/bin/sh","-c","jupyter notebook --ip='0.0.0.0' --port=8888 --allow-root"] 
